@@ -16,6 +16,7 @@ import {
   PlugInIcon,
   TableIcon,
   UserCircleIcon,
+  EnvelopeIcon,
 } from "../icons/index";
 
 type NavItem = {
@@ -316,6 +317,7 @@ const AppSidebar: React.FC = () => {
                 alt="Logo"
                 width={150}
                 height={40}
+                style={{ width: 'auto', height: 'auto' }}
               />
               <Image
                 className="hidden dark:block"
@@ -323,6 +325,7 @@ const AppSidebar: React.FC = () => {
                 alt="Logo"
                 width={150}
                 height={40}
+                style={{ width: 'auto', height: 'auto' }}
               />
             </>
           ) : (

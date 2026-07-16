@@ -1,0 +1,153 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id              String              @id @default(cuid())
+  userName        String              @unique
+  fullName        String
+  password        String
+  role            UserRole
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  statusHistories MailStatusHistory[] @relation("UserStatusHistories")
+
+  @@index([userName])
+  @@index([role])
+}
+
+model Tenant {
+  id            String       @id @default(cuid())
+  name          String
+  typeTenant    TenantType
+  wing          Wing
+  floor         String
+  roomNumber    String
+
+  mailboxId     String       @unique
+  mailbox       Mailbox      @relation(fields: [mailboxId], references: [id])
+
+  contactPerson String?
+  logoUrl       String?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  subsidiaries  Subsidiary[]
+  mailrecords   Mailrecord[]
+
+  @@index([name])
+  @@index([wing, floor])
+}
+
+model Mailbox {
+  id        String   @id @default(cuid())
+  number    String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tenant    Tenant?
+
+  @@index([number])
+}
+
+model Subsidiary {
+  id          String       @id @default(cuid())
+  name        String
+  tenantId    String
+  tenant      Tenant       @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  mailrecords Mailrecord[]
+
+  @@index([tenantId])
+  @@index([name])
+}
+
+model Mailrecord {
+  id             String              @id @default(cuid())
+  trackingNumber String              @unique
+  tenantId       String
+  subsidiaryId   String?
+  mailType       MailType
+  sequenceNumber Int
+  currentStatus  MailStatus
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+
+  tenant       Tenant      @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  subsidiary   Subsidiary? @relation(fields: [subsidiaryId], references: [id], onDelete: Cascade)
+
+  histories    MailStatusHistory[]
+
+  @@index([trackingNumber])
+  @@index([tenantId])
+  @@index([currentStatus])
+  @@index([createdAt])
+}
+
+model MailStatusHistory {
+  id              String      @id @default(cuid())
+  mailrecordId    String
+  mailrecord      Mailrecord  @relation(fields: [mailrecordId], references: [id], onDelete: Cascade)
+
+  oldStatus       MailStatus?
+  newStatus       MailStatus
+
+  changedByUserId String?
+  changedByUser   User?       @relation("UserStatusHistories", fields: [changedByUserId], references: [id], onDelete: SetNull)
+
+  pickedUpByName  String?
+  returnReason    ReturnReason?
+  note            String?
+  changedAt       DateTime    @default(now())
+
+  @@index([mailrecordId])
+  @@index([newStatus])
+  @@index([changedAt])
+}
+
+enum UserRole {
+  ADMIN
+  STAFF
+}
+
+enum Wing {
+  NORTH
+  SOUTH
+}
+
+enum TenantType {
+  OFFICE
+  SHOP
+}
+
+enum MailType {
+  LETTER
+  PACKAGE
+  DOCUMENTS
+}
+
+enum MailStatus {
+  SORTED
+  READY
+  PICKED_UP
+  RETURNED
+}
+
+enum ReturnReason {
+  WRONG_ADDRESS
+  UNCLAIMED
+  REJECTED
+}

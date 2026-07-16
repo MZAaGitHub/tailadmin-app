@@ -1,0 +1,22 @@
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.42.69:3000
+- Environments: .env
+✓ Ready in 1386ms
+
+ GET / 200 in 1070ms (next.js: 792ms, application-code: 279ms)
+ GET /calendar 200 in 48ms (next.js: 26ms, application-code: 22ms)
+ GET /profile 200 in 42ms (next.js: 25ms, application-code: 17ms)
+ GET /basic-tables 200 in 56ms (next.js: 26ms, application-code: 30ms)
+ GET /error-404 200 in 427ms (next.js: 401ms, application-code: 26ms)
+[browser] Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /line-chart 200 in 45ms (next.js: 27ms, application-code: 18ms)
+ GET /bar-chart 200 in 47ms (next.js: 28ms, application-code: 19ms)
+ GET /profile 200 in 21ms (next.js: 3ms, application-code: 17ms)
+ GET /calendar 200 in 17ms (next.js: 2ms, application-code: 15ms)
+ GET /profile 200 in 19ms (next.js: 3ms, application-code: 15ms)
+ GET /basic-tables 200 in 28ms (next.js: 3ms, application-code: 25ms)
+ GET /profile 200 in 35ms (next.js: 4ms, application-code: 31ms)
+ GET /calendar 200 in 29ms (next.js: 4ms, application-code: 24ms)
+[?25h
