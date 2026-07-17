@@ -1,22 +1,30 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
-- Network:       http://192.168.42.69:3000
+- Network:       http://192.168.42.201:3000
 - Environments: .env
-✓ Ready in 1386ms
+✓ Ready in 428ms
 
- GET / 200 in 1070ms (next.js: 792ms, application-code: 279ms)
- GET /calendar 200 in 48ms (next.js: 26ms, application-code: 22ms)
- GET /profile 200 in 42ms (next.js: 25ms, application-code: 17ms)
- GET /basic-tables 200 in 56ms (next.js: 26ms, application-code: 30ms)
- GET /error-404 200 in 427ms (next.js: 401ms, application-code: 26ms)
-[browser] Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+ GET /error-404 200 in 2.3s (next.js: 2.1s, application-code: 249ms)
 [browser] Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
- GET /line-chart 200 in 45ms (next.js: 27ms, application-code: 18ms)
- GET /bar-chart 200 in 47ms (next.js: 28ms, application-code: 19ms)
- GET /profile 200 in 21ms (next.js: 3ms, application-code: 17ms)
- GET /calendar 200 in 17ms (next.js: 2ms, application-code: 15ms)
- GET /profile 200 in 19ms (next.js: 3ms, application-code: 15ms)
- GET /basic-tables 200 in 28ms (next.js: 3ms, application-code: 25ms)
- GET /profile 200 in 35ms (next.js: 4ms, application-code: 31ms)
- GET /calendar 200 in 29ms (next.js: 4ms, application-code: 24ms)
+[browser] Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+○ Compiling / ...
+ GET / 200 in 5.6s (next.js: 5.6s, application-code: 40ms)
+ GET /calendar 200 in 531ms (next.js: 504ms, application-code: 27ms)
+ GET /profile 200 in 562ms (next.js: 539ms, application-code: 22ms)
+ GET /form-elements 200 in 520ms (next.js: 494ms, application-code: 26ms)
+ GET /basic-tables 200 in 366ms (next.js: 323ms, application-code: 43ms)
+ GET /blank 200 in 307ms (next.js: 290ms, application-code: 17ms)
+ GET /error-404 200 in 21ms (next.js: 2ms, application-code: 19ms)
+ GET / 200 in 32ms (next.js: 3ms, application-code: 29ms)
+ GET /line-chart 200 in 373ms (next.js: 350ms, application-code: 23ms)
+ GET /bar-chart 200 in 369ms (next.js: 346ms, application-code: 23ms)
+ GET /alerts 200 in 323ms (next.js: 290ms, application-code: 33ms)
+ GET /avatars 200 in 303ms (next.js: 275ms, application-code: 28ms)
+ GET /badge 200 in 520ms (next.js: 485ms, application-code: 35ms)
+ GET /buttons 200 in 341ms (next.js: 317ms, application-code: 24ms)
+ GET /images 200 in 338ms (next.js: 316ms, application-code: 23ms)
+ GET / 200 in 45ms (next.js: 6ms, application-code: 39ms)
+ GET /profile 200 in 20ms (next.js: 3ms, application-code: 16ms)
+ GET /calendar 200 in 19ms (next.js: 3ms, application-code: 16ms)
+ GET / 200 in 23ms (next.js: 3ms, application-code: 20ms)
 [?25h

@@ -1,0 +1,7 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["className=\"([^\"]*)\"", "\"([^\"]*)\""],
+    ["className='([^']*)'", "'([^']*)'"]
+  ],
+  "tailwindCSS.lint.cssConflict": "ignore"
+}

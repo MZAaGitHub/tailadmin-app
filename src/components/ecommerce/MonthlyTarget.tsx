@@ -73,7 +73,7 @@ export default function MonthlyTarget() {
   }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/[0.03]">
+    <div className="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/3">
       <div className="px-5 pt-5 bg-white shadow-default rounded-2xl pb-11 dark:bg-gray-900 sm:px-6 sm:pt-6">
         <div className="flex justify-between">
           <div>
@@ -111,7 +111,7 @@ export default function MonthlyTarget() {
           </div>
         </div>
         <div className="relative ">
-          <div className="max-h-[330px]">
+          <div className="max-h-82.5">
             <ReactApexChart
               options={options}
               series={series}
@@ -120,11 +120,11 @@ export default function MonthlyTarget() {
             />
           </div>
 
-          <span className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-[95%] rounded-full bg-success-50 px-3 py-1 text-xs font-medium text-success-600 dark:bg-success-500/15 dark:text-success-500">
+          <span className="absolute left-1/2 top-full -translate-x-1/2 translate-y-[-95%] rounded-full bg-success-50 px-3 py-1 text-xs font-medium text-success-600 dark:bg-success-500/15 dark:text-success-500">
             +10%
           </span>
         </div>
-        <p className="mx-auto mt-10 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base">
+        <p className="mx-auto mt-10 w-full max-w-95 text-center text-sm text-gray-500 sm:text-base">
           You earn $3287 today, it&apos;s higher than last month. Keep up your
           good work!
         </p>

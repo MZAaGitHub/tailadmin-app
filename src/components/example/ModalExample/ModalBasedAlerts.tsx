@@ -42,7 +42,7 @@ export default function ModalBasedAlerts() {
       <Modal
         isOpen={successModal.isOpen}
         onClose={successModal.closeModal}
-        className="max-w-[600px] p-5 lg:p-10"
+        className="max-w-150 p-5 lg:p-10"
       >
         <div className="text-center">
           <div className="relative flex items-center justify-center z-1 mb-7">
@@ -101,7 +101,7 @@ export default function ModalBasedAlerts() {
       <Modal
         isOpen={infoModal.isOpen}
         onClose={infoModal.closeModal}
-        className="max-w-[600px] p-5 lg:p-10"
+        className="max-w-150 p-5 lg:p-10"
       >
         <div className="text-center">
           <div className="relative flex items-center justify-center z-1 mb-7">
@@ -161,7 +161,7 @@ export default function ModalBasedAlerts() {
       <Modal
         isOpen={warningModal.isOpen}
         onClose={warningModal.closeModal}
-        className="max-w-[600px] p-5 lg:p-10"
+        className="max-w-150 p-5 lg:p-10"
       >
         <div className="text-center">
           <div className="relative flex items-center justify-center z-1 mb-7">
@@ -221,7 +221,7 @@ export default function ModalBasedAlerts() {
       <Modal
         isOpen={errorModal.isOpen}
         onClose={errorModal.closeModal}
-        className="max-w-[600px] p-5 lg:p-10"
+        className="max-w-150 p-5 lg:p-10"
       >
         <div className="text-center">
           <div className="relative flex items-center justify-center z-1 mb-7">

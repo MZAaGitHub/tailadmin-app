@@ -22,7 +22,7 @@ export default function DefaultModal() {
         <Modal
           isOpen={isOpen}
           onClose={closeModal}
-          className="max-w-[600px] p-5 lg:p-10"
+          className="max-w-150 p-5 lg:p-10"
         >
           <h4 className="font-semibold text-gray-800 mb-7 text-title-sm dark:text-white/90">
             Modal Heading
